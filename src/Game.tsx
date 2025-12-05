@@ -1,28 +1,28 @@
 // src/Game.tsx
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { problems, problemSolutions } from "../data/cards";
 import type { ProblemCard, SolutionCard } from "./types";
 
 // Palette de couleurs basée sur l'abeille
-const colors = {
-    darkBlue: "#0057A4",
-    blue: "#1A84D9",
-    violet: "#8A3FF7",
-    pink: "#F37CCF",
-    orange: "#F6A55A",
-    yellow: "#F6D464",
+// const colors = {
+//     darkBlue: "#0057A4",
+//     blue: "#1A84D9",
+//     violet: "#8A3FF7",
+//     pink: "#F37CCF",
+//     orange: "#F6A55A",
+//     yellow: "#F6D464",
 
-    // Gradients pour les différents éléments
-    bgGradient: "bg-gradient-to-br from-[#0057A4] via-[#1A84D9] to-[#8A3FF7]",
-    cardUserGradient: "bg-gradient-to-br from-[#8A3FF7] via-[#F37CCF] to-[#F6A55A]",
-    cardBigTechGradient: "bg-gradient-to-br from-[#0057A4] via-[#1A84D9] to-[#8A3FF7]",
-    problemGradient: "bg-gradient-to-br from-[#1A84D9] via-[#8A3FF7] to-[#F37CCF]",
-    scoreGradient: "bg-gradient-to-r from-[#F6A55A] via-[#F6D464] to-[#F37CCF]",
+//     // Gradients pour les différents éléments
+//     bgGradient: "bg-gradient-to-br from-[#0057A4] via-[#1A84D9] to-[#8A3FF7]",
+//     cardUserGradient: "bg-gradient-to-br from-[#8A3FF7] via-[#F37CCF] to-[#F6A55A]",
+//     cardBigTechGradient: "bg-gradient-to-br from-[#0057A4] via-[#1A84D9] to-[#8A3FF7]",
+//     problemGradient: "bg-gradient-to-br from-[#1A84D9] via-[#8A3FF7] to-[#F37CCF]",
+//     scoreGradient: "bg-gradient-to-r from-[#F6A55A] via-[#F6D464] to-[#F37CCF]",
 
-    // Couleurs de texte
-    textLight: "#FFFFFF",
-    textDark: "#0A2540",
-};
+//     // Couleurs de texte
+//     textLight: "#FFFFFF",
+//     textDark: "#0A2540",
+// };
 
 export default function Game() {
     const [round, setRound] = useState(0);
