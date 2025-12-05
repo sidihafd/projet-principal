@@ -135,12 +135,12 @@ export default function Game() {
         <div
             className={`relative rounded-2xl p-5 border-2 cursor-pointer transition-all duration-300 h-full ${isBigTech
                 ? 'bg-gradient-to-br from-[#cde8ff] via-[#824292] to-[#c7aaf3] border-[#1A84D9]/50'
-                : 'bg-gradient-to-br from-[#8A3FF7] via-[#924a7d] to-[#2a1a36] border-[#F37CCF]/50'
+                : 'bg-[#2a1a36] border-[#F37CCF]/50'
                 } ${isSelected
                     ? isBigTech
-                        ? 'border-[#0057A4] scale-[1.02] shadow-[0_0_30px_rgba(26,132,217,0.5)]'
-                        : 'border-[#F6D464] scale-[1.02] shadow-[0_0_30px_rgba(246,212,100,0.5)]'
-                    : 'hover:border-[#F6D464] hover:shadow-lg'
+                        ? 'border-[#ffffff] scale-[1.02] shadow-[0_0_30px_rgba(26,132,217,0.5)]'
+                        : 'border-[#ffffff] scale-[1.02] shadow-[0_0_30px_rgba(246,212,100,0.5)]'
+                    : 'hover:border-[#cdeec5] hover:shadow-lg'
                 } ${isAnimating && !isSelected ? 'opacity-50' : 'opacity-100'}`}
             onClick={onClick}
         >
@@ -195,9 +195,9 @@ export default function Game() {
     );
 
     return (
-        <div className="min-h-screen bg-gradient-to-br from-[#afd5f7] via-[#295b85] to-[#8e6ac5] text-white font-sans overflow-auto">
+        <div className="min-h-screen bg-gradient-to-br  from-[#3d2f47] via-[#1b0f27] to-[#683e79] text-white font-sans overflow-auto">
             {/* Dégradé d'arrière-plan */}
-            <div className="absolute inset-0 bg-gradient-to-br from-[#0057A4]/20 via-[#1A84D9]/20 to-[#8A3FF7]/20 backdrop-blur-sm"></div>
+            {/* <div className="absolute inset-0  backdrop-blur-sm"></div> */}
 
             <div className="relative container mx-auto px-4 py-6">
                 {/* Header avec logo abeille */}
@@ -317,7 +317,7 @@ export default function Game() {
 
                             {/* Instructions */}
                             {!selectedSolution && (
-                                <div className="bg-gradient-to-r from-fuchsia-400 to-fuchsia-200 p-4 rounded-lg mb-6 border border-x-fuchsia-300 backdrop-blur-sm">
+                                <div className="bg-gradient-to-r v p-4 rounded-lg mb-6 border border-x-fuchsia-300 backdrop-blur-sm">
                                     <div className="flex items-center space-x-3">
                                         <div className="w-6 h-6 bg-gradient-to-r from-fuchsia-400 to-violet-400 rounded-full flex items-center justify-center">
                                             <span className="text-sm">❓</span>
@@ -365,7 +365,7 @@ export default function Game() {
                         </div>
 
                         {/* Sélection Big Tech */}
-                        <div>
+                        <div className="h-[91%]">
                             <div className="mb-6">
                                 <div className="inline-flex items-center space-x-3 bg-gradient-to-r from-[#0057A4]/30 to-[#1A84D9]/30 px-4 py-2 rounded-lg border border-[#1A84D9]/50 backdrop-blur-sm">
                                     <div className="w-3 h-3 bg-gradient-to-r from-[#0057A4] to-[#1A84D9] rounded-full"></div>
@@ -522,7 +522,7 @@ export default function Game() {
 
                 {/* Écran de fin avec nouvelles couleurs */}
                 {gameOver && (
-                    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-gradient-to-br from-[#0057A4]/95 via-[#1A84D9]/95 to-[#8A3FF7]/95 backdrop-blur-sm">
+                    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-gradient-to-br from-[#3d2f47] via-[#1b0f27] to-[#683e79] backdrop-blur-sm">
                         <div className="max-w-2xl w-full rounded-3xl overflow-hidden bg-gradient-to-br from-white/10 to-white/5 border-2 border-white/20 shadow-2xl backdrop-blur-lg">
                             <div className="p-8 text-center">
                                 <div className="text-7xl mb-6 animate-bounce">
